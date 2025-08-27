@@ -93,14 +93,11 @@ section header h2 {
     display: inline-block;
 }
 
-/* Formula Image Styles */
-.formula-img {
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.formula-img img {
+  max-width: 100%;
+  height: auto; /* otomatis menjaga rasio */
+  display: block;
+  margin: 0 auto;
 }
 
 .img-luas {
