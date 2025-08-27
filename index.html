@@ -1,99 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Matematik - Adhingrh01</title>
-    
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
-    
+    <!-- JS External -->
+    <script src="js/script.js"></script>
 </head>
-
 <body>
     <!-- Head Content -->
     <header>
         <h1>Welcome to My Katik</h1>
-
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged.</p>
+        <p>Website ini dibuat untuk membantu menghitung luas dan keliling bangun datar dengan interaktif.</p>
 
         <!-- Navigation  -->
         <nav>
-            <a class="bg-aliceblue" href="">Segitiga</a>
-            <a class="bg-antique-white" href="">Jajar Genjang</a>
+            <a class="bg-aliceblue" href="#segitiga">Segitiga</a>
+            <a class="bg-antique-white" href="#jajargenjang">Jajar Genjang</a>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Luas Section -->
-        <section>
+        <!-- ================= SEGITIGA ================= -->
+        <section id="segitiga">
             <header>
                 <h2>Luas Segitiga</h2>
             </header>
-
-            <!-- Konten Luas -->
             <div class="formula-img img-luas"></div>
+            <p>Rumus Luas Segitiga: ½ × alas × tinggi</p>
 
-            <p>Rumus Luas Segitiga: 1/2 * alas * tinggi</p>
-          
-            <!-- Form Luas -->
-            <form>
-                <header>
-                    <h3>Form Luas Segitiga</h3>
-                </header>
-
+            <form id="form-luas-sgt">
+                <header><h3>Form Luas Segitiga</h3></header>
                 <div class="input-group">
                     <label for="alas">Alas:</label>
-                    <input type="number" id="alas" name="alas" placeholder="Masukkan Alas Segitiga">
+                    <input type="number" id="alas" placeholder="Masukkan Alas Segitiga">
                 </div>
-
                 <div class="input-group">
                     <label for="tinggi">Tinggi:</label>
-                    <input type="number" id="tinggi" name="tinggi" placeholder="Masukkan Tinggi Segitiga">
+                    <input type="number" id="tinggi" placeholder="Masukkan Tinggi Segitiga">
                 </div>
-
-                <button type="button">Hitung</button>
+                <p id="hasil-luas-sgt"></p>
+                <div class="btn-group">
+                    <button type="button" onclick="hitungLuasSegitiga()">Hitung</button>
+                    <button type="reset" onclick="resetForm('hasil-luas-sgt')">Reset</button>
+                </div>
             </form>
         </section>
 
-        <!-- Keliling Section -->
         <section>
             <header>
                 <h2>Keliling Segitiga</h2>
             </header>
-
-            <!-- Konten Keliling -->
             <div class="formula-img img-keliling"></div>
-
             <p>Rumus Keliling Segitiga: sisi A + sisi B + sisi C</p>
 
-            <!-- Form Keliling -->
-            <form>
-                <header>
-                    <h3>Form Keliling Segitiga</h3>
-                </header>
-
+            <form id="form-keliling-sgt">
+                <header><h3>Form Keliling Segitiga</h3></header>
                 <div class="input-group">
                     <label for="sisi-a">Sisi A:</label>
-                    <input type="number" id="sisi-a" name="sisi-a" placeholder="Masukkan Sisi A">
+                    <input type="number" id="sisi-a" placeholder="Masukkan Sisi A">
                 </div>
-
                 <div class="input-group">
                     <label for="sisi-b">Sisi B:</label>
-                    <input type="number" id="sisi-b" name="sisi-b" placeholder="Masukkan Sisi B">
+                    <input type="number" id="sisi-b" placeholder="Masukkan Sisi B">
                 </div>
-
                 <div class="input-group">
                     <label for="sisi-c">Sisi C:</label>
-                    <input type="number" id="sisi-c" name="sisi-c" placeholder="Masukkan Sisi C">
+                    <input type="number" id="sisi-c" placeholder="Masukkan Sisi C">
                 </div>
+                <p id="hasil-keliling-sgt"></p>
+                <div class="btn-group">
+                    <button type="button" onclick="hitungKelilingSegitiga()">Hitung</button>
+                    <button type="reset" onclick="resetForm('hasil-keliling-sgt')">Reset</button>
+                </div>
+            </form>
+        </section>
 
-                <button type="button">Hitung</button>
+        <!-- ================= JAJAR GENJANG ================= -->
+        <section id="jajargenjang">
+            <header>
+                <h2>Luas Jajar Genjang</h2>
+            </header>
+            <div class="formula-img" style="background-image: url('https://picsum.photos/260');"></div>
+            <p>Rumus Luas Jajar Genjang: alas × tinggi</p>
+
+            <form id="form-luas-jg">
+                <header><h3>Form Luas Jajar Genjang</h3></header>
+                <div class="input-group">
+                    <label for="alas-jg">Alas:</label>
+                    <input type="number" id="alas-jg" placeholder="Masukkan Alas">
+                </div>
+                <div class="input-group">
+                    <label for="tinggi-jg">Tinggi:</label>
+                    <input type="number" id="tinggi-jg" placeholder="Masukkan Tinggi">
+                </div>
+                <p id="hasil-luas-jg"></p>
+                <div class="btn-group">
+                    <button type="button" onclick="hitungLuasJG()">Hitung</button>
+                    <button type="reset" onclick="resetForm('hasil-luas-jg')">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <header>
+                <h2>Keliling Jajar Genjang</h2>
+            </header>
+            <div class="formula-img" style="background-image: url('https://picsum.photos/270');"></div>
+            <p>Rumus Keliling Jajar Genjang: 2 × (alas + sisi miring)</p>
+
+            <form id="form-keliling-jg">
+                <header><h3>Form Keliling Jajar Genjang</h3></header>
+                <div class="input-group">
+                    <label for="alas-jg-k">Alas:</label>
+                    <input type="number" id="alas-jg-k" placeholder="Masukkan Alas">
+                </div>
+                <div class="input-group">
+                    <label for="sisi-jg">Sisi Miring:</label>
+                    <input type="number" id="sisi-jg" placeholder="Masukkan Sisi Miring">
+                </div>
+                <p id="hasil-keliling-jg"></p>
+                <div class="btn-group">
+                    <button type="button" onclick="hitungKelilingJG()">Hitung</button>
+                    <button type="reset" onclick="resetForm('hasil-keliling-jg')">Reset</button>
+                </div>
             </form>
         </section>
     </main>
@@ -103,5 +136,4 @@
         <p>&copy; 2025 Adhingrh01. All rights reserved.</p>
     </footer>
 </body>
-
 </html>
