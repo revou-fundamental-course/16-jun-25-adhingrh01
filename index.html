@@ -1,211 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Matematik</title>
-    <!-- CSS External -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- JS External -->
-    <script src="js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Matematik</title>
+  <!-- CSS External -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JS External -->
+  <script src="js/script.js" defer></script>
 </head>
+
 <body>
-    <!-- Head Content -->
-    <header>
-        <h1>Welcome to My Katik</h1>
-        <p>Website ini dibuat untuk membantu menghitung luas dan keliling bangun datar dengan interaktif.</p>
+  <!-- Head Content -->
+  <header>
+    <h1>Welcome to My Katik</h1>
+    <p>Website ini dibuat untuk membantu menghitung luas dan keliling bangun datar dengan interaktif.</p>
 
-        <!-- Navigation -->
-        <nav>
-            <a href="#segitiga" onclick="showSection('segitiga')">Segitiga</a>
-            <a href="#jajargenjang" onclick="showSection('jajargenjang')">Jajar Genjang</a>
-            <a href="#persegi-panjang" onclick="showSection('persegi-panjang')">Persegi Panjang</a>
-            <a href="#lingkaran" onclick="showSection('lingkaran')">Lingkaran</a>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav>
+      <a href="#segitiga" onclick="showSection('segitiga')">Segitiga</a>
+      <a href="#jajargenjang" onclick="showSection('jajargenjang')">Jajar Genjang</a>
+      <a href="#persegi-panjang" onclick="showSection('persegi-panjang')">Persegi Panjang</a>
+      <a href="#lingkaran" onclick="showSection('lingkaran')">Lingkaran</a>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- ================= SEGITIGA ================= -->
-        <section id="segitiga">
-            <header><h2>Segitiga</h2></header>
-            <p>Luas = ½ × alas × tinggi</p>
-            <p>Keliling = sisi A + sisi B + sisi C</p>
+  <!-- Main Content -->
+  <main>
+    <!-- ================= SEGITIGA ================= -->
+    <section id="segitiga">
+      <header>
+        <h2>Segitiga</h2>
+      </header>
+      <p>Luas = ½ × alas × tinggi</p>
+      <p>Keliling = sisi A + sisi B + sisi C</p>
 
-            <!-- Luas Segitiga -->
-            <form>
-                <header><h3>Luas Segitiga</h3></header>
-                <div class="input-group">
-                    <label for="alas">Alas:</label>
-                    <input type="number" id="alas" placeholder="Masukkan Alas">
-                </div>
-                <div class="input-group">
-                    <label for="tinggi">Tinggi:</label>
-                    <input type="number" id="tinggi" placeholder="Masukkan Tinggi">
-                </div>
-                <p id="hasil-luas-sgt"></p>
-                <div class="btn-group">
-                    <button type="button" onclick="hitungLuasSegitiga()">Hitung</button>
-                    <button type="reset" onclick="resetForm('hasil-luas-sgt')">Reset</button>
-                </div>
-            </form>
+      <!-- Luas Segitiga -->
+      <form>
+        <header>
+          <h3>Luas Segitiga</h3>
+        </header>
+        <div class="input-group">
+          <label for="alas">Alas:</label>
+          <input type="number" id="alas" placeholder="Masukkan Alas">
+        </div>
+        <div class="input-group">
+          <label for="tinggi">Tinggi:</label>
+          <input type="number" id="tinggi" placeholder="Masukkan Tinggi">
+        </div>
+        <p id="hasil-luas-sgt"></p>
+        <div class="btn-group">
+          <button type="button" onclick="hitungLuasSegitiga()">Hitung</button>
+          <button type="reset" onclick="resetForm('hasil-luas-sgt')">Reset</button>
+        </div>
+      </form>
 
-            <!-- Keliling Segitiga -->
-            <form>
-                <header><h3>Keliling Segitiga</h3></header>
-                <div class="input-group">
-                    <label for="sisi-a">Sisi A:</label>
-                    <input type="number" id="sisi-a" placeholder="Masukkan Sisi A">
-                </div>
-                <div class="input-group">
-                    <label for="sisi-b">Sisi B:</label>
-                    <input type="number" id="sisi-b" placeholder="Masukkan Sisi B">
-                </div>
-                <div class="input-group">
-                    <label for="sisi-c">Sisi C:</label>
-                    <input type="number" id="sisi-c" placeholder="Masukkan Sisi C">
-                </div>
-                <p id="hasil-keliling-sgt"></p>
-                <div class="btn-group">
-                    <button type="button" onclick="hitungKelilingSegitiga()">Hitung</button>
-                    <button type="reset" onclick="resetForm('hasil-keliling-sgt')">Reset</button>
-                </div>
-            </form>
-        </section>
+      <!-- Keliling Segitiga -->
+      <form>
+        <header>
+          <h3>Keliling Segitiga</h3>
+        </header>
+        <div class="input-group">
+          <label for="sisi-a">Sisi A:</label>
+          <input type="number" id="sisi-a" placeholder="Masukkan Sisi A">
+        </div>
+        <div class="input-group">
+          <label for="sisi-b">Sisi B:</label>
+          <input type="number" id="sisi-b" placeholder="Masukkan Sisi B">
+        </div>
+        <div class="input-group">
+          <label for="sisi-c">Sisi C:</label>
+          <input type="number" id="sisi-c" placeholder="Masukkan Sisi C">
+        </div>
+        <p id="hasil-keliling-sgt"></p>
+        <div class="btn-group">
+          <button type="button" onclick="hitungKelilingSegitiga()">Hitung</button>
+          <button type="reset" onclick="resetForm('hasil-keliling-sgt')">Reset</button>
+        </div>
+      </form>
+    </section>
 
-        <!-- ================= JAJAR GENJANG ================= -->
-        <section id="jajargenjang" class="hidden">
-            <header><h2>Jajar Genjang</h2></header>
-            <p>Luas = alas × tinggi</p>
-            <p>Keliling = 2 × (alas + sisi miring)</p>
+    <!-- ================= JAJAR GENJANG ================= -->
+    <section id="jajargenjang" class="hidden">
+      <header>
+        <h2>Jajar Genjang</h2>
+      </header>
+      <p>Luas = alas × tinggi</p>
+      <p>Keliling = 2 × (alas + sisi miring)</p>
 
-            <!-- Luas -->
-            <form>
-                <header><h3>Luas Jajar Genjang</h3></header>
-                <div class="input-group">
-                    <label for="alas-jg">Alas:</label>
-                    <input type="number" id="alas-jg" placeholder="Masukkan Alas">
-                </div>
-                <div class="input-group">
-                    <label for="tinggi-jg">Tinggi:</label>
-                    <input type="number" id="tinggi-jg" placeholder="Masukkan Tinggi">
-                </div>
-                <p id="hasil-luas-jg"></p>
-                <div class="btn-group">
-                    <button type="button" onclick="hitungLuasJG()">Hitung</button>
-                    <button type="reset" onclick="resetForm('hasil-luas-jg')">Reset</button>
-                </div>
-            </form>
+      <!-- Luas -->
+      <form>
+        <header>
+          <h3>Luas Jajar Genjang</h3>
+        </header>
+        <div class="input-group">
+          <label for="alas-jg">Alas:</label>
+          <input type="number" id="alas-jg" placeholder="Masukkan Alas">
+        </div>
+        <div class="input-group">
+          <label for="tinggi-jg">Tinggi:</label>
+          <input type="number" id="tinggi-jg" placeholder="Masukkan Tinggi">
+        </div>
+        <p id="hasil-luas-jg"></p>
+        <div class="btn-group">
+          <button type="button" onclick="hitungLuasJG()">Hitung</button>
+          <button type="reset" onclick="resetForm('hasil-luas-jg')">Reset</button>
+        </div>
+      </form>
 
-            <!-- Keliling -->
-            <form>
-                <header><h3>Keliling Jajar Genjang</h3></header>
-                <div class="input-group">
-                    <label for="alas-jg-k">Alas:</label>
-                    <input type="number" id="alas-jg-k" placeholder="Masukkan Alas">
-                </div>
-                <div class="input-group">
-                    <label for="sisi-jg">Sisi Miring:</label>
-                    <input type="number" id="sisi-jg" placeholder="Masukkan Sisi Miring">
-                </div>
-                <p id="hasil-keliling-jg"></p>
-                <div class="btn-group">
-                    <button type="button" onclick="hitungKelilingJG()">Hitung</button>
-                    <button type="reset" onclick="resetForm('hasil-keliling-jg')">Reset</button>
-                </div>
-            </form>
-        </section>
+      <!-- Keliling -->
+      <form>
+        <header>
+          <h3>Keliling Jajar Genjang</h3>
+        </header>
+        <div class="input-group">
+          <label for="alas-jg-k">Alas:</label>
+          <input type="number" id="alas-jg-k" placeholder="Masukkan Alas">
+        </div>
+        <div class="input-group">
+          <label for="sisi-jg">Sisi Miring:</label>
+          <input type="number" id="sisi-jg" placeholder="Masukkan Sisi Miring">
+        </div>
+        <p id="hasil-keliling-jg"></p>
+        <div class="btn-group">
+          <button type="button" onclick="hitungKelilingJG()">Hitung</button>
+          <button type="reset" onclick="resetForm('hasil-keliling-jg')">Reset</button>
+        </div>
+      </form>
+    </section>
 
-        <!-- ================= PERSEGI PANJANG ================= -->
-        <section id="persegi-panjang" class="hidden">
-            <header><h2>Persegi Panjang</h2></header>
-            <p>Luas = Panjang × Lebar</p>
-            <p>Keliling = 2 × (Panjang + Lebar)</p>
+    <!-- ================= PERSEGI PANJANG ================= -->
+    <section id="persegi-panjang" class="hidden">
+      <header>
+        <h2>Persegi Panjang</h2>
+      </header>
+      <p>Luas = Panjang × Lebar</p>
+      <p>Keliling = 2 × (Panjang + Lebar)</p>
 
-            <!-- Luas -->
-            <form>
-                <header><h3>Luas Persegi Panjang</h3></header>
-                <div class="input-group">
-                    <label for="panjang">Panjang:</label>
-                    <input type="number" id="panjang" placeholder="Masukkan Panjang">
-                </div>
-                <div class="input-group">
-                    <label for="lebar">Lebar:</label>
-                    <input type="number" id="lebar" placeholder="Masukkan Lebar">
-                </div>
-                <p id="hasil-luas-persegi"></p>
-                <div class="btn-group">
-                    <button type="button" onclick="hitungLuasPersegiPanjang()">Hitung</button>
-                    <button type="reset" onclick="resetForm('hasil-luas-persegi')">Reset</button>
-                </div>
-            </form>
+      <!-- Luas -->
+      <form>
+        <header>
+          <h3>Luas Persegi Panjang</h3>
+        </header>
+        <div class="input-group">
+          <label for="panjang">Panjang:</label>
+          <input type="number" id="panjang" placeholder="Masukkan Panjang">
+        </div>
+        <div class="input-group">
+          <label for="lebar">Lebar:</label>
+          <input type="number" id="lebar" placeholder="Masukkan Lebar">
+        </div>
+        <p id="hasil-luas-persegi"></p>
+        <div class="btn-group">
+          <button type="button" onclick="hitungLuasPersegiPanjang()">Hitung</button>
+          <button type="reset" onclick="resetForm('hasil-luas-persegi')">Reset</button>
+        </div>
+      </form>
 
-            <!-- Keliling -->
-            <form>
-                <header><h3>Keliling Persegi Panjang</h3></header>
-                <div class="input-group">
-                    <label for="panjang-k">Panjang:</label>
-                    <input type="number" id="panjang-k" placeholder="Masukkan Panjang">
-                </div>
-                <div class="input-group">
-                    <label for="lebar-k">Lebar:</label>
-                    <input type="number" id="lebar-k" placeholder="Masukkan Lebar">
-                </div>
-                <p id="hasil-keliling-persegi"></p>
-                <div class="btn-group">
-                    <button type="button" onclick="hitungKelilingPersegiPanjang()">Hitung</button>
-                    <button type="reset" onclick="resetForm('hasil-keliling-persegi')">Reset</button>
-                </div>
-            </form>
-        </section>
+      <!-- Keliling -->
+      <form>
+        <header>
+          <h3>Keliling Persegi Panjang</h3>
+        </header>
+        <div class="input-group">
+          <label for="panjang-k">Panjang:</label>
+          <input type="number" id="panjang-k" placeholder="Masukkan Panjang">
+        </div>
+        <div class="input-group">
+          <label for="lebar-k">Lebar:</label>
+          <input type="number" id="lebar-k" placeholder="Masukkan Lebar">
+        </div>
+        <p id="hasil-keliling-persegi"></p>
+        <div class="btn-group">
+          <button type="button" onclick="hitungKelilingPersegiPanjang()">Hitung</button>
+          <button type="reset" onclick="resetForm('hasil-keliling-persegi')">Reset</button>
+        </div>
+      </form>
+    </section>
 
 
-        <!-- ================= LINGKARAN ================= -->
-        <section id="lingkaran" class="hidden">
-            <header><h2>Lingkaran</h2></header>
-            <p>Luas = π × r²</p>
-            <p>Keliling = 2 × π × r</p>
+    <!-- ================= LINGKARAN ================= -->
+    <section id="lingkaran" class="hidden">
+      <header>
+        <h2>Lingkaran</h2>
+      </header>
+      <p>Luas = π × r²</p>
+      <p>Keliling = 2 × π × r</p>
 
-            <!-- Luas -->
-            <form>
-                <header><h3>Luas Lingkaran</h3></header>
-                <div class="input-group">
-                    <label for="jari">Jari-jari:</label>
-                    <input type="number" id="jari" placeholder="Masukkan Jari-jari">
-                </div>
-                <p id="hasil-luas-lingkaran"></p>
-                <div class="btn-group">
-                    <button type="button" onclick="hitungLuasLingkaran()">Hitung</button>
-                    <button type="reset" onclick="resetForm('hasil-luas-lingkaran')">Reset</button>
-                </div>
-            </form>
+      <!-- Luas -->
+      <form>
+        <header>
+          <h3>Luas Lingkaran</h3>
+        </header>
+        <div class="input-group">
+          <label for="jari">Jari-jari:</label>
+          <input type="number" id="jari" placeholder="Masukkan Jari-jari">
+        </div>
+        <p id="hasil-luas-lingkaran"></p>
+        <div class="btn-group">
+          <button type="button" onclick="hitungLuasLingkaran()">Hitung</button>
+          <button type="reset" onclick="resetForm('hasil-luas-lingkaran')">Reset</button>
+        </div>
+      </form>
 
-            <!-- Keliling -->
-            <form>
-                <header><h3>Keliling Lingkaran</h3></header>
-                <div class="input-group">
-                    <label for="jari-k">Jari-jari:</label>
-                    <input type="number" id="jari-k" placeholder="Masukkan Jari-jari">
-                </div>
-                <p id="hasil-keliling-lingkaran"></p>
-                <div class="btn-group">
-                    <button type="button" onclick="hitungKelilingLingkaran()">Hitung</button>
-                    <button type="reset" onclick="resetForm('hasil-keliling-lingkaran')">Reset</button>
-                </div>
-            </form>
-        </section>
+      <!-- Keliling -->
+      <form>
+        <header>
+          <h3>Keliling Lingkaran</h3>
+        </header>
+        <div class="input-group">
+          <label for="jari-k">Jari-jari:</label>
+          <input type="number" id="jari-k" placeholder="Masukkan Jari-jari">
+        </div>
+        <p id="hasil-keliling-lingkaran"></p>
+        <div class="btn-group">
+          <button type="button" onclick="hitungKelilingLingkaran()">Hitung</button>
+          <button type="reset" onclick="resetForm('hasil-keliling-lingkaran')">Reset</button>
+        </div>
+      </form>
+    </section>
 
 
     <!-- Footer Content -->
     <footer>
-        <p>&copy; <span id="year"></span> Adhingrh01. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Adhingrh01. All rights reserved.</p>
     </footer>
 
     <script>
-        const startYear = 2024;
-        const currentYear = new Date().getFullYear();
-        document.getElementById("year").textContent =
-            startYear === currentYear ? startYear : `${startYear}–${currentYear}`;
+      const startYear = 2024;
+      const currentYear = new Date().getFullYear();
+      document.getElementById("year").textContent =
+        startYear === currentYear ? startYear : `${startYear}–${currentYear}`;
     </script>
 </body>
+
 </html>
