@@ -11,7 +11,7 @@ Welcome to my repository 🎉
 ---
 
 ## 🚀 Demo Website  
-👉 [MyKatik - Live Website]([https://adhx0.github.io/mykatik/](https://revou-fundamental-course.github.io/16-jun-25-adhingrh01/)
+👉 [MyKatik - Live Website](https://revou-fundamental-course.github.io/16-jun-25-adhingrh01/)
 
 
 ## 📖 Cara Menggunakan
@@ -25,3 +25,4 @@ Welcome to my repository 🎉
 
 Terima kasih sudah berkunjung ke repository ini 🙏  
 Jangan lupa ⭐ jika repo ini bermanfaat!
+
